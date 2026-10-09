@@ -9,7 +9,7 @@ py=pyqrcode.create(text)
 
 py.svg(file_name_svg,scale=8)
 py.png(file_name_png,scale=10)
-os.makedirs(f"./QRs/")
+os.makedirs("./QRs/", exist_ok=True)
 
 shutil.move(file_name_svg,"./QRs/")
 shutil.move(file_name_png,"./QRs/")
